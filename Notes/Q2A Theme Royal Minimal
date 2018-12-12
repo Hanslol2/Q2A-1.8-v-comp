@@ -1,0 +1,70 @@
+theme : Royal Minimal#
+theme.js:
+	
+	loolex---start on line 9
+		New:	//var menuLeft=document.getElementById('qa-nav-group'),showLeftPush=document.getElementById('showLeftPush'),body=document.body;showLeftPush.onclick=function(){classie.toggle(this,'active');classie.toggle(body,'qa-spmenu-push-toright');classie.toggle(menuLeft,'qa-spmenu-open');};
+	loolex---end on line 11
+
+qm-default.css:
+
+	loolex---start on line 2
+		New:	.qa-nav-cat{display: none;}
+			.qa-q-item-where{display: none;}
+			.qa-q-view-where{display: none;}
+			#qa-topbar-group{padding : 0;}
+	loolex---end on line 7
+
+qa-theme.php:
+
+	function html():
+
+		loolex---start on line 34
+			Added template.php to include menus
+			New:	$pathToFile= dirname(__DIR__, 3);
+				$templateContent = file_get_contents($pathToFile."/Templates/template.php");
+				$this->output_raw($templateContent);
+
+		loolex---end on line 38
+
+
+	function top_bar():
+
+		loolex---start on line 175
+			Replaced old topbar with loolex header 
+			New:	$pathToFile= dirname(__DIR__, 3);
+				$templateContentTopbar = file_get_contents($pathToFile."/Templates/template-header.php");
+			
+				$this->output_raw($templateContentTopbar); 
+
+		loolex---end on line 192
+
+	function body_header():
+	
+		loolex---start on line 202
+			New:	//$this->output('<DIV ID="sidepanelclose"><i class="icon-cancel close"></i></DIV>');
+		loolex---end on line 204
+
+	function header():
+
+		loolex---start on line 222
+			New:	//$this->logo();
+		loolex---end on line 224
+
+	function sidepanel():
+
+		loolex---start on line 312
+			New:	//$this->q2am_user_details();
+		loolex---end on line 315
+	
+
+		loolex---start on line 328
+			New:	//$this->q2am_feedback_button();
+		loolex---end on line 330
+
+	function body_suffix():
+
+		loolex---start on line 534
+			New:	$pathToFile= dirname(__DIR__, 3);
+				$templateContentFooter = file_get_contents($pathToFile."/Templates/template-footer.php");
+				$this->output_raw($templateContentFooter);
+		loolex---end on line 538

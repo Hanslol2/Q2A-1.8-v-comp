@@ -1,0 +1,38 @@
+qa-include/pages/ask.php :
+
+	process input:
+	loolex---start on line 171
+		Added functionality to read category as get parameter
+			New:	include_once(dirname(QA_INCLUDE_DIR,2)."/Q2A/qa-plugin/loolex-custom/loolex-exc.php");
+				if(isset($_GET["cat"])){
+					$in['categoryid'] = getCategoryID($_GET["cat"],$_GET["desc"]);
+				}
+
+	 loolex---end on line 176
+
+qa-include/pages/question-post.php
+
+	function qa_page_q_edit_q_form(&$qa_content, $question, $in, $errors, $completetags, $categories):
+
+	loolex---start on line 376
+		Added rule parameter 'recatable' to if query
+			Old:if (qa_using_categories() && count($categories) && $question['retagcatable']) {
+
+			New:if (qa_using_categories() && count($categories) && $question['retagcatable'] && $question['recatable']) {
+
+	loolex---end on line 379
+
+
+	function qa_page_q_edit_q_submit($question, $answers, $commentsfollows, $closepost, &$in, &$errors):
+
+	loolex---start on line 435
+		Added check for rule parameter 'recatable'
+			Old:	if (qa_using_categories())
+				$in['categoryid'] = qa_get_category_field_value('q_category');
+
+			New:	if($rules['recatable'] == true){
+				if (qa_using_categories())
+				$in['categoryid'] = qa_get_category_field_value('q_category');
+				}
+
+	loolex---end on line 444

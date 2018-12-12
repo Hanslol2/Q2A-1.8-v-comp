@@ -34,10 +34,10 @@
 	define('QA_MYSQL_PORT', '3306');
 */
 
-	define('QA_MYSQL_HOSTNAME', '127.0.0.1');
-	define('QA_MYSQL_USERNAME', 'your-mysql-username');
-	define('QA_MYSQL_PASSWORD', 'your-mysql-password');
-	define('QA_MYSQL_DATABASE', 'your-mysql-db-name');
+	define('QA_MYSQL_HOSTNAME', '%%DB_HOST%%');
+	define('QA_MYSQL_USERNAME', '%%DB_USER%%');
+	define('QA_MYSQL_PASSWORD', '%%DB_PASSWORD%%');
+	define('QA_MYSQL_DATABASE', '%%DB_NAME%%');
 
 /*
 	Ultra-concise installation instructions:
@@ -66,13 +66,13 @@
 /*
 	If you wish, you can define QA_MYSQL_USERS_PREFIX separately from QA_MYSQL_TABLE_PREFIX.
 	If so, tables containing information about user accounts (not including users' activity and points)
-	get the prefix of QA_MYSQL_TABLE_PREFIX. This allows multiple Q2A sites to have shared logins 
+	get the prefix of QA_MYSQL_TABLE_PREFIX. This allows multiple Q2A sites to have shared logins
 	and users, but separate posts and activity.
-	
-	If you have installed question2answer with default "qa_" prefix and want to setup a second 
-	installation, you define the QA_MYSQL_USERS_PREFIX as "qa_" so this new installation 
+
+	If you have installed question2answer with default "qa_" prefix and want to setup a second
+	installation, you define the QA_MYSQL_USERS_PREFIX as "qa_" so this new installation
 	can access the same database as the first installation.
-	
+
 	define('QA_MYSQL_USERS_PREFIX', 'sharedusers_');
 */
 

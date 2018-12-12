@@ -1,0 +1,46 @@
+Use this instruction file to configure q2a after successfully using the setupWebsite.sh script
+
+1. Enter the account credentials for the super-admin account of the q2a forum, THIS IS NOT the same account that is used by the Database
+2. General Settings
+	2.1 Change the "Q&A site name" to "Loolex Q&A" and change the "Preferred site URL" to the ABSOLUTE path to your website, this may include using a subdomain
+	2.2 Change the URL Structure to "/index.php/123/why-do-birds-sing"
+	2.3 Change the "Site Language" to "German - Deutsch"
+	2.4 In the general settings tab select the "Royal Minimal" as "Site Theme" and "Theme for Mobiles"
+	2.5 Make sure "Tags and Categories" is selected as "Question classification"
+3. E-Mails
+	3.1 Change the "Sender address for messages from site" to something appropriate
+	3.2 Adjust the "Privacy note for email addresses - HTML allowed" to match the data protection declaration (Datenschutzerklärung)
+4. Users
+	Nothing to do here, adjust the settings as needed, take note that registration and login are NOT handled by Q2A, so any changes to those forms cannot be made in Q2A
+5. Layout
+	5.1 Uncheck the "Custom HTML in sidebar box on every page"
+6. Posting
+	Nothing to do here, adjust the settings as needed
+7. Viewing
+	Adjust the settings as needed, change "Sort answers by" to "Votes" instead of "Time"
+8. Lists
+	Nothing to do here, adjust the settings as needed
+9. Categories
+	9.1 Enable Questions without Category
+10. Permissions
+	Nothing to do here, adjust the settings as needed
+11. Pages
+	Nothing to do here, adjust the settings as needed, Navigation is disabled in the theme, Surfable Pages need to be added to the Loolex navigation menu
+12. RSS Feed
+	Nothing to do here, adjust the settings as needed
+13. Points
+	Nothing to do here, adjust the settings as needed
+14. Spam
+	Nothing to do here, adjust the settings as needed
+15. Caching
+	Nothing to do here, adjust the settings as needed
+16. Stats
+	Nothing to do here, adjust the settings as needed
+17. Mailing
+	Nothing to do here, adjust the settings as needed
+18. Plugins
+	18.1 Make sure Custom Askbox Widget, Event Logger, Loolex Custom,Q2AM Royal Minimal Settings, WYSIWYG Editor is enabled
+	18.2 Make sure Royal Minimal Settings color Scheme is set to default
+
+
+
